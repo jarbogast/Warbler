@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB5DB68A1EC13CD400DCB44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6891EC13CD400DCB44E /* AppDelegate.swift */; };
+		AB5DB68C1EC13CD400DCB44E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB68B1EC13CD400DCB44E /* ViewController.swift */; };
+		AB5DB68F1EC13CD400DCB44E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB68D1EC13CD400DCB44E /* Main.storyboard */; };
+		AB5DB6921EC13CD400DCB44E /* Warbler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6901EC13CD400DCB44E /* Warbler.xcdatamodeld */; };
+		AB5DB6941EC13CD400DCB44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB6931EC13CD400DCB44E /* Assets.xcassets */; };
+		AB5DB6971EC13CD400DCB44E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB6951EC13CD400DCB44E /* LaunchScreen.storyboard */; };
+		AB5DB6A21EC13CD400DCB44E /* WarblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6A11EC13CD400DCB44E /* WarblerTests.swift */; };
+		AB5DB6AD1EC13CD400DCB44E /* WarblerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB5DB69E1EC13CD400DCB44E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB5DB67E1EC13CD400DCB44E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB5DB6851EC13CD400DCB44E;
+			remoteInfo = Warbler;
+		};
+		AB5DB6A91EC13CD400DCB44E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB5DB67E1EC13CD400DCB44E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB5DB6851EC13CD400DCB44E;
+			remoteInfo = Warbler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AB5DB6861EC13CD400DCB44E /* Warbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5DB6891EC13CD400DCB44E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AB5DB68B1EC13CD400DCB44E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB5DB68E1EC13CD400DCB44E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AB5DB6911EC13CD400DCB44E /* Warbler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Warbler.xcdatamodel; sourceTree = "<group>"; };
+		AB5DB6931EC13CD400DCB44E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB5DB6961EC13CD400DCB44E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AB5DB6981EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5DB69D1EC13CD400DCB44E /* WarblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5DB6A11EC13CD400DCB44E /* WarblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarblerTests.swift; sourceTree = "<group>"; };
+		AB5DB6A31EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5DB6A81EC13CD400DCB44E /* WarblerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarblerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarblerUITests.swift; sourceTree = "<group>"; };
+		AB5DB6AE1EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB5DB6831EC13CD400DCB44E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5DB69A1EC13CD400DCB44E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5DB6A51EC13CD400DCB44E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB5DB67D1EC13CD400DCB44E = {
+			isa = PBXGroup;
+			children = (
+				AB5DB6881EC13CD400DCB44E /* Warbler */,
+				AB5DB6A01EC13CD400DCB44E /* WarblerTests */,
+				AB5DB6AB1EC13CD400DCB44E /* WarblerUITests */,
+				AB5DB6871EC13CD400DCB44E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB5DB6871EC13CD400DCB44E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB5DB6861EC13CD400DCB44E /* Warbler.app */,
+				AB5DB69D1EC13CD400DCB44E /* WarblerTests.xctest */,
+				AB5DB6A81EC13CD400DCB44E /* WarblerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB5DB6881EC13CD400DCB44E /* Warbler */ = {
+			isa = PBXGroup;
+			children = (
+				AB5DB6891EC13CD400DCB44E /* AppDelegate.swift */,
+				AB5DB68B1EC13CD400DCB44E /* ViewController.swift */,
+				AB5DB68D1EC13CD400DCB44E /* Main.storyboard */,
+				AB5DB6931EC13CD400DCB44E /* Assets.xcassets */,
+				AB5DB6951EC13CD400DCB44E /* LaunchScreen.storyboard */,
+				AB5DB6981EC13CD400DCB44E /* Info.plist */,
+				AB5DB6901EC13CD400DCB44E /* Warbler.xcdatamodeld */,
+			);
+			path = Warbler;
+			sourceTree = "<group>";
+		};
+		AB5DB6A01EC13CD400DCB44E /* WarblerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AB5DB6A11EC13CD400DCB44E /* WarblerTests.swift */,
+				AB5DB6A31EC13CD400DCB44E /* Info.plist */,
+			);
+			path = WarblerTests;
+			sourceTree = "<group>";
+		};
+		AB5DB6AB1EC13CD400DCB44E /* WarblerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */,
+				AB5DB6AE1EC13CD400DCB44E /* Info.plist */,
+			);
+			path = WarblerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB5DB6851EC13CD400DCB44E /* Warbler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5DB6B11EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "Warbler" */;
+			buildPhases = (
+				AB5DB6821EC13CD400DCB44E /* Sources */,
+				AB5DB6831EC13CD400DCB44E /* Frameworks */,
+				AB5DB6841EC13CD400DCB44E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Warbler;
+			productName = Warbler;
+			productReference = AB5DB6861EC13CD400DCB44E /* Warbler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AB5DB69C1EC13CD400DCB44E /* WarblerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5DB6B41EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "WarblerTests" */;
+			buildPhases = (
+				AB5DB6991EC13CD400DCB44E /* Sources */,
+				AB5DB69A1EC13CD400DCB44E /* Frameworks */,
+				AB5DB69B1EC13CD400DCB44E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB5DB69F1EC13CD400DCB44E /* PBXTargetDependency */,
+			);
+			name = WarblerTests;
+			productName = WarblerTests;
+			productReference = AB5DB69D1EC13CD400DCB44E /* WarblerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AB5DB6A71EC13CD400DCB44E /* WarblerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB5DB6B71EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "WarblerUITests" */;
+			buildPhases = (
+				AB5DB6A41EC13CD400DCB44E /* Sources */,
+				AB5DB6A51EC13CD400DCB44E /* Frameworks */,
+				AB5DB6A61EC13CD400DCB44E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB5DB6AA1EC13CD400DCB44E /* PBXTargetDependency */,
+			);
+			name = WarblerUITests;
+			productName = WarblerUITests;
+			productReference = AB5DB6A81EC13CD400DCB44E /* WarblerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB5DB67E1EC13CD400DCB44E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jonathan Arbogast";
+				TargetAttributes = {
+					AB5DB6851EC13CD400DCB44E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4J237JQ3KN;
+						ProvisioningStyle = Automatic;
+					};
+					AB5DB69C1EC13CD400DCB44E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4J237JQ3KN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB5DB6851EC13CD400DCB44E;
+					};
+					AB5DB6A71EC13CD400DCB44E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4J237JQ3KN;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AB5DB6851EC13CD400DCB44E;
+					};
+				};
+			};
+			buildConfigurationList = AB5DB6811EC13CD400DCB44E /* Build configuration list for PBXProject "Warbler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AB5DB67D1EC13CD400DCB44E;
+			productRefGroup = AB5DB6871EC13CD400DCB44E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB5DB6851EC13CD400DCB44E /* Warbler */,
+				AB5DB69C1EC13CD400DCB44E /* WarblerTests */,
+				AB5DB6A71EC13CD400DCB44E /* WarblerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB5DB6841EC13CD400DCB44E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5DB6971EC13CD400DCB44E /* LaunchScreen.storyboard in Resources */,
+				AB5DB6941EC13CD400DCB44E /* Assets.xcassets in Resources */,
+				AB5DB68F1EC13CD400DCB44E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5DB69B1EC13CD400DCB44E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5DB6A61EC13CD400DCB44E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB5DB6821EC13CD400DCB44E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5DB68C1EC13CD400DCB44E /* ViewController.swift in Sources */,
+				AB5DB6921EC13CD400DCB44E /* Warbler.xcdatamodeld in Sources */,
+				AB5DB68A1EC13CD400DCB44E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5DB6991EC13CD400DCB44E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5DB6A21EC13CD400DCB44E /* WarblerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB5DB6A41EC13CD400DCB44E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB5DB6AD1EC13CD400DCB44E /* WarblerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AB5DB69F1EC13CD400DCB44E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB5DB6851EC13CD400DCB44E /* Warbler */;
+			targetProxy = AB5DB69E1EC13CD400DCB44E /* PBXContainerItemProxy */;
+		};
+		AB5DB6AA1EC13CD400DCB44E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB5DB6851EC13CD400DCB44E /* Warbler */;
+			targetProxy = AB5DB6A91EC13CD400DCB44E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AB5DB68D1EC13CD400DCB44E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB5DB68E1EC13CD400DCB44E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AB5DB6951EC13CD400DCB44E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB5DB6961EC13CD400DCB44E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB5DB6AF1EC13CD400DCB44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB5DB6B01EC13CD400DCB44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB5DB6B21EC13CD400DCB44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4J237JQ3KN;
+				INFOPLIST_FILE = Warbler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.Warbler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AB5DB6B31EC13CD400DCB44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4J237JQ3KN;
+				INFOPLIST_FILE = Warbler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.Warbler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AB5DB6B51EC13CD400DCB44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4J237JQ3KN;
+				INFOPLIST_FILE = WarblerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.WarblerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Warbler.app/Warbler";
+			};
+			name = Debug;
+		};
+		AB5DB6B61EC13CD400DCB44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4J237JQ3KN;
+				INFOPLIST_FILE = WarblerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.WarblerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Warbler.app/Warbler";
+			};
+			name = Release;
+		};
+		AB5DB6B81EC13CD400DCB44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4J237JQ3KN;
+				INFOPLIST_FILE = WarblerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.WarblerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Warbler;
+			};
+			name = Debug;
+		};
+		AB5DB6B91EC13CD400DCB44E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4J237JQ3KN;
+				INFOPLIST_FILE = WarblerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.WarblerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Warbler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB5DB6811EC13CD400DCB44E /* Build configuration list for PBXProject "Warbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5DB6AF1EC13CD400DCB44E /* Debug */,
+				AB5DB6B01EC13CD400DCB44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB5DB6B11EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "Warbler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5DB6B21EC13CD400DCB44E /* Debug */,
+				AB5DB6B31EC13CD400DCB44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB5DB6B41EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "WarblerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5DB6B51EC13CD400DCB44E /* Debug */,
+				AB5DB6B61EC13CD400DCB44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AB5DB6B71EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "WarblerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5DB6B81EC13CD400DCB44E /* Debug */,
+				AB5DB6B91EC13CD400DCB44E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AB5DB6901EC13CD400DCB44E /* Warbler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AB5DB6911EC13CD400DCB44E /* Warbler.xcdatamodel */,
+			);
+			currentVersion = AB5DB6911EC13CD400DCB44E /* Warbler.xcdatamodel */;
+			path = Warbler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AB5DB67E1EC13CD400DCB44E /* Project object */;
+}
