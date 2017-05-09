@@ -13,8 +13,9 @@
 		AB5DB6921EC13CD400DCB44E /* Warbler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6901EC13CD400DCB44E /* Warbler.xcdatamodeld */; };
 		AB5DB6941EC13CD400DCB44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB6931EC13CD400DCB44E /* Assets.xcassets */; };
 		AB5DB6971EC13CD400DCB44E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB6951EC13CD400DCB44E /* LaunchScreen.storyboard */; };
-		AB5DB6A21EC13CD400DCB44E /* WarblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6A11EC13CD400DCB44E /* WarblerTests.swift */; };
 		AB5DB6AD1EC13CD400DCB44E /* WarblerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */; };
+		AB5DB6BB1EC13DC100DCB44E /* URLSearchTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */; };
+		AB5DB6BD1EC13E2900DCB44E /* URL+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +45,12 @@
 		AB5DB6961EC13CD400DCB44E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB5DB6981EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5DB69D1EC13CD400DCB44E /* WarblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB5DB6A11EC13CD400DCB44E /* WarblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarblerTests.swift; sourceTree = "<group>"; };
 		AB5DB6A31EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5DB6A81EC13CD400DCB44E /* WarblerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarblerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarblerUITests.swift; sourceTree = "<group>"; };
 		AB5DB6AE1EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSearchTestCase.swift; sourceTree = "<group>"; };
+		AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Search.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				AB5DB6951EC13CD400DCB44E /* LaunchScreen.storyboard */,
 				AB5DB6981EC13CD400DCB44E /* Info.plist */,
 				AB5DB6901EC13CD400DCB44E /* Warbler.xcdatamodeld */,
+				AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */,
 			);
 			path = Warbler;
 			sourceTree = "<group>";
@@ -113,8 +116,8 @@
 		AB5DB6A01EC13CD400DCB44E /* WarblerTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB5DB6A11EC13CD400DCB44E /* WarblerTests.swift */,
 				AB5DB6A31EC13CD400DCB44E /* Info.plist */,
+				AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */,
 			);
 			path = WarblerTests;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 					AB5DB69C1EC13CD400DCB44E = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 4J237JQ3KN;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = AB5DB6851EC13CD400DCB44E;
 					};
@@ -268,6 +272,7 @@
 				AB5DB68C1EC13CD400DCB44E /* ViewController.swift in Sources */,
 				AB5DB6921EC13CD400DCB44E /* Warbler.xcdatamodeld in Sources */,
 				AB5DB68A1EC13CD400DCB44E /* AppDelegate.swift in Sources */,
+				AB5DB6BD1EC13E2900DCB44E /* URL+Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB5DB6A21EC13CD400DCB44E /* WarblerTests.swift in Sources */,
+				AB5DB6BB1EC13DC100DCB44E /* URLSearchTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,11 +453,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4J237JQ3KN;
 				INFOPLIST_FILE = WarblerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.WarblerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Warbler.app/Warbler";
 			};
@@ -463,6 +470,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 4J237JQ3KN;
 				INFOPLIST_FILE = WarblerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
