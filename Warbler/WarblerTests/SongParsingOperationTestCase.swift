@@ -27,6 +27,11 @@ class SongParsingOperationTestCase: XCTestCase {
         assert(dictionary: dictionary, resultsInSong: nil)
     }
     
+    func testWrongTypeForKindKey() {
+        let dictionary = ["kind": 52]
+        assert(dictionary: dictionary, resultsInSong: nil)
+    }
+    
     func assert(dictionary: Dictionary<String, Any>, resultsInSong song: Song?) {
         let operation = SongParsingOperation(dictionary: dictionary)
         
