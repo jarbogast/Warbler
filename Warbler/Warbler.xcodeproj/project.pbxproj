@@ -17,6 +17,8 @@
 		AB5DB6BD1EC13E2900DCB44E /* URL+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */; };
 		AB5DB6BF1EC1538E00DCB44E /* SongParsingOperationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6BE1EC1538E00DCB44E /* SongParsingOperationTestCase.swift */; };
 		AB5DB6C11EC155B100DCB44E /* SongParsingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6C01EC155B100DCB44E /* SongParsingOperation.swift */; };
+		AB5DB6C31EC2A90400DCB44E /* JsonParsingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6C21EC2A90400DCB44E /* JsonParsingOperation.swift */; };
+		AB5DB6C51EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6C41EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Search.swift"; sourceTree = "<group>"; };
 		AB5DB6BE1EC1538E00DCB44E /* SongParsingOperationTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongParsingOperationTestCase.swift; sourceTree = "<group>"; };
 		AB5DB6C01EC155B100DCB44E /* SongParsingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongParsingOperation.swift; sourceTree = "<group>"; };
+		AB5DB6C21EC2A90400DCB44E /* JsonParsingOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParsingOperation.swift; sourceTree = "<group>"; };
+		AB5DB6C41EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonParsingOperationTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				AB5DB6981EC13CD400DCB44E /* Info.plist */,
 				AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */,
 				AB5DB6C01EC155B100DCB44E /* SongParsingOperation.swift */,
+				AB5DB6C21EC2A90400DCB44E /* JsonParsingOperation.swift */,
 			);
 			path = Warbler;
 			sourceTree = "<group>";
@@ -121,6 +126,7 @@
 				AB5DB6A31EC13CD400DCB44E /* Info.plist */,
 				AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */,
 				AB5DB6BE1EC1538E00DCB44E /* SongParsingOperationTestCase.swift */,
+				AB5DB6C41EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift */,
 			);
 			path = WarblerTests;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5DB6C31EC2A90400DCB44E /* JsonParsingOperation.swift in Sources */,
 				AB5DB68C1EC13CD400DCB44E /* ViewController.swift in Sources */,
 				AB5DB68A1EC13CD400DCB44E /* AppDelegate.swift in Sources */,
 				AB5DB6BD1EC13E2900DCB44E /* URL+Search.swift in Sources */,
@@ -283,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB5DB6C51EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift in Sources */,
 				AB5DB6BB1EC13DC100DCB44E /* URLSearchTestCase.swift in Sources */,
 				AB5DB6BF1EC1538E00DCB44E /* SongParsingOperationTestCase.swift in Sources */,
 			);
