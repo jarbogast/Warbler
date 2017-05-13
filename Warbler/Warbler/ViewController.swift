@@ -8,17 +8,35 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     var iTunesDataSource = ProductionITunesDataSource()
+    var songList = [Song]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         iTunesDataSource.fetchSongsMatchingSearchTerm("Jack Johnson", completionBlock: { (songs) in
-            print("Fetched \(songs.count) songs")
+            DispatchQueue.main.async {
+                self.songList = songs
+                self.tableView.reloadData()
+            }
         })
-        
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return songList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell")!
+        cell.textLabel?.text = songList[indexPath.row].name
+        cell.detailTextLabel?.text = String(songList[indexPath.row].trackPrice)
+        return cell
     }
 }
 

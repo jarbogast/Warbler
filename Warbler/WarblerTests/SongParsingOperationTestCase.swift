@@ -12,8 +12,8 @@ import XCTest
 class SongParsingOperationTestCase: XCTestCase {
     
     func testValidDictionary() {
-        let dictionary = ["kind": "song", "trackName": "Better Together"]
-        let expectedSong = Song(name: "Better Together")
+        let dictionary = ["kind": "song", "trackName": "Better Together", "trackPrice": "$0.99"]
+        let expectedSong = Song(name: "Better Together", trackPrice: "$0.99")
         assert(dictionary: dictionary, resultsInSong: expectedSong)
     }
     
@@ -40,7 +40,8 @@ class SongParsingOperationTestCase: XCTestCase {
         queue.addOperation(operation)
         queue.waitUntilAllOperationsAreFinished()
         
-        let songName = operation.songs.count > 0 ? operation.songs[0].name : nil
-        XCTAssertEqual(songName, song?.name)
+        let actualSong: Song? = operation.songs.count > 0 ? operation.songs[0] : nil
+        XCTAssertEqual(actualSong?.name, song?.name)
+        XCTAssertEqual(actualSong?.trackPrice, song?.trackPrice)
     }
 }

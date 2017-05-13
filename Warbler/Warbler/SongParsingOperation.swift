@@ -10,6 +10,7 @@ import UIKit
 
 struct Song {
     let name: String
+    let trackPrice: Double
 }
 
 class SongParsingOperation: Operation {
@@ -25,10 +26,9 @@ class SongParsingOperation: Operation {
             guard kind == "song" else { return }
         
             guard let name = dictionary["trackName"] as? String else { return }
+            guard let trackPrice = dictionary["trackPrice"] as? Double else { return }
             
-            let song = Song(name: name)
-            songs.append(song)
-            print(song)
+            songs.append(Song(name: name, trackPrice: trackPrice))
         }
     }
 }
