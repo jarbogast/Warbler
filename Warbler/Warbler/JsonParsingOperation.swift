@@ -10,19 +10,16 @@ import UIKit
 
 class JsonParsingOperation: Operation {
 
-    var input: Data
-    var output: Dictionary<String, String>?
-    
-    init(input: Data) {
-        self.input = input
-        super.init()
-    }
+    var input: Data?
+    var output: Dictionary<String, Any>?
     
     override func main() {
+        guard let input = input else { return }
+        
         do {
-            try output = JSONSerialization.jsonObject(with: input, options: .allowFragments) as? Dictionary<String, String>
+            output = try JSONSerialization.jsonObject(with: input, options: .allowFragments) as? Dictionary<String, Any>
         } catch {
-            
+            print(error)
         }
     }
 }

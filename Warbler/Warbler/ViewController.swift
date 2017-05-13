@@ -10,5 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let songOperation = SongBySearchTermOperation(searchTerm: "Jack Johnson")
+        let jsonOperation = JsonParsingOperation()
+        let parseOperation = SongParsingOperation()
+
+        let adapterOperation1 = BlockOperation {
+            jsonOperation.input = songOperation.data
+        }
+        
+        let adapterOperation2 = BlockOperation {
+            let results = jsonOperation.output?["results"] as? [Dictionary<String, Any>
+                ]
+            parseOperation.dictionary = results?[0]
+        }
+        
+        adapterOperation1.addDependency(songOperation)
+        jsonOperation.addDependency(adapterOperation1)
+        adapterOperation2.addDependency(jsonOperation)
+        parseOperation.addDependency(adapterOperation2)
+        
+        let operationQueue = OperationQueue()
+        operationQueue.addOperations([songOperation, adapterOperation1, jsonOperation, adapterOperation2, parseOperation], waitUntilFinished: true)
+        
+        print(parseOperation.song!)
+    }
 }
 

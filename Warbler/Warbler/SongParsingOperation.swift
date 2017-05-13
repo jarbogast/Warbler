@@ -14,15 +14,11 @@ struct Song {
 
 class SongParsingOperation: Operation {
     
-    var dictionary: Dictionary<String, Any>
+    var dictionary: Dictionary<String, Any>?
     var song: Song?
     
-    init(dictionary: Dictionary<String, Any>) {
-        self.dictionary = dictionary
-        super.init()
-    }
-    
     override func main() {
+        guard let dictionary = dictionary else { return }
         guard let kind = dictionary["kind"] as? String else { return }
         guard kind == "song" else { return }
         
