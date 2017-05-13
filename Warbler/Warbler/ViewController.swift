@@ -22,9 +22,8 @@ class ViewController: UIViewController {
         }
         
         let adapterOperation2 = BlockOperation {
-            let results = jsonOperation.output?["results"] as? [Dictionary<String, Any>
-                ]
-            parseOperation.dictionary = results?[0]
+            let results = jsonOperation.output?["results"] as? [Dictionary<String, Any>]
+            parseOperation.dictionaries = results
         }
         
         adapterOperation1.addDependency(songOperation)
@@ -33,9 +32,8 @@ class ViewController: UIViewController {
         parseOperation.addDependency(adapterOperation2)
         
         let operationQueue = OperationQueue()
-        operationQueue.addOperations([songOperation, adapterOperation1, jsonOperation, adapterOperation2, parseOperation], waitUntilFinished: true)
+        operationQueue.addOperations([songOperation, adapterOperation1, jsonOperation, adapterOperation2, parseOperation], waitUntilFinished: false)
         
-        print(parseOperation.song!)
     }
 }
 
