@@ -12,8 +12,8 @@ import XCTest
 class SongParsingOperationTestCase: XCTestCase {
     
     func testValidDictionary() {
-        let dictionary = ["kind": "song", "trackName": "Better Together", "trackPrice": "$0.99"]
-        let expectedSong = Song(name: "Better Together", trackPrice: "$0.99")
+        let dictionary = ["kind": "song", "trackName": "Better Together", "trackPrice": 0.99] as [String : Any]
+        let expectedSong = Song(name: "Better Together", trackPrice: 0.99)
         assert(dictionary: dictionary, resultsInSong: expectedSong)
     }
     
