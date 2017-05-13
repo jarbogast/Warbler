@@ -22,13 +22,16 @@ class JsonParsingOperationTestCase: XCTestCase {
     }
     
     func assertData(_ data: Data, parsesTo expectedDictionary: [String:String]?) {
-        let operation = JsonParsingOperation(input: data)
+        let operation = JsonParsingOperation()
+        operation.input = data
+        
         let operationQueue = OperationQueue()
         operationQueue.addOperation(operation)
         operationQueue.waitUntilAllOperationsAreFinished()
         
         if let expectedDictionary = expectedDictionary {
-            XCTAssertEqual(operation.output!, expectedDictionary)
+            let dictionary = operation.output as! [String:String]
+            XCTAssertEqual(dictionary, expectedDictionary)
         } else {
             XCTAssertNil(operation.output)
         }

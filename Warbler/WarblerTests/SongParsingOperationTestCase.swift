@@ -33,12 +33,14 @@ class SongParsingOperationTestCase: XCTestCase {
     }
     
     func assert(dictionary: Dictionary<String, Any>, resultsInSong song: Song?) {
-        let operation = SongParsingOperation(dictionary: dictionary)
+        let operation = SongParsingOperation()
+        operation.dictionaries = [dictionary]
         
         let queue = OperationQueue()
         queue.addOperation(operation)
         queue.waitUntilAllOperationsAreFinished()
         
-        XCTAssertEqual(operation.song?.name, song?.name)
+        let songName = operation.songs.count > 0 ? operation.songs[0].name : nil
+        XCTAssertEqual(songName, song?.name)
     }
 }
