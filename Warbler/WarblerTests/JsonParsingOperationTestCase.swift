@@ -21,7 +21,11 @@ class JsonParsingOperationTestCase: XCTestCase {
         assertData(data, parsesTo: nil)
     }
     
-    func assertData(_ data: Data, parsesTo expectedDictionary: [String:String]?) {
+    func testNilJSON() {
+        assertData(nil, parsesTo: nil)
+    }
+    
+    func assertData(_ data: Data?, parsesTo expectedDictionary: [String:String]?) {
         let operation = JsonParsingOperation()
         operation.input = data
         

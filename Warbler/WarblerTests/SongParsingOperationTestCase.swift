@@ -23,7 +23,12 @@ class SongParsingOperationTestCase: XCTestCase {
     }
     
     func testMissingName() {
-        let dictionary = ["kind": "song"]
+        let dictionary = ["kind": "song", "trackPrice": 1.29] as [String : Any]
+        assert(dictionary: dictionary, resultsInSong: nil)
+    }
+    
+    func testMissingTrackPrice() {
+        let dictionary = ["kind": "song", "trackName": "Better Together"]
         assert(dictionary: dictionary, resultsInSong: nil)
     }
     
@@ -32,9 +37,17 @@ class SongParsingOperationTestCase: XCTestCase {
         assert(dictionary: dictionary, resultsInSong: nil)
     }
     
-    func assert(dictionary: Dictionary<String, Any>, resultsInSong song: Song?) {
+    func testNilDictionary() {
+        assert(dictionary: nil, resultsInSong: nil)
+    }
+    
+    func assert(dictionary: Dictionary<String, Any>?, resultsInSong song: Song?) {
         let operation = SongParsingOperation()
-        operation.dictionaries = [dictionary]
+        if let dictionary = dictionary {
+            operation.dictionaries = [dictionary]
+        } else {
+            operation.dictionaries = nil
+        }
         
         let queue = OperationQueue()
         queue.addOperation(operation)
