@@ -52,7 +52,8 @@ class SongListViewControllerTestCase: XCTestCase {
         
         let viewController = createSongListViewController()
         viewController.iTunesDataSource = TestiTunesDataSource(expectation: searchExpectation)
-        viewController.searchButtonPressed(nil)
+        _ = viewController.view
+        viewController.searchBar(viewController.searchBar, textDidChange: "Jack Johnson")
 
         waitForExpectations(timeout: 3.0, handler: nil)
     }

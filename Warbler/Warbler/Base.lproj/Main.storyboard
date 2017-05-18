@@ -17,9 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" text="" placeholder="Search" id="eRL-Oc-jVh">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="xJi-P3-ZZg" detailTextLabel="gn5-Yf-Y9b" style="IBUITableViewCellStyleSubtitle" id="DOr-dJ-bSQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DOr-dJ-bSQ" id="WqA-3N-Q0H">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -48,13 +53,10 @@
                             <outlet property="delegate" destination="s1p-1m-6nT" id="743-f5-5rm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Songs" id="0mL-Qd-6uk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="3US-Yb-QtQ">
-                            <connections>
-                                <action selector="searchButtonPressed:" destination="s1p-1m-6nT" id="vxY-ME-Sbn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Songs" id="0mL-Qd-6uk"/>
+                    <connections>
+                        <outlet property="searchBar" destination="eRL-Oc-jVh" id="NAH-Qt-7GC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Po-hB-hiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

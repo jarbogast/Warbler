@@ -13,15 +13,24 @@ class SongListViewController: UITableViewController, WarblerViewController {
     var iTunesDataSource: ITunesDataSource?
     var songList = [Song]()
     
-    @IBAction func searchButtonPressed(_ sender: UIBarButtonItem?) {
-        iTunesDataSource?.fetchSongsMatchingSearchTerm("Jack Johnson", completionBlock: { (songs) in
+    @IBOutlet weak var searchBar: UISearchBar! {
+        didSet {
+            searchBar.delegate = self
+        }
+    }
+}
+
+extension SongListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard searchText.characters.count > 0 else { return }
+        
+        iTunesDataSource?.fetchSongsMatchingSearchTerm(searchText, completionBlock: { (songs) in
             DispatchQueue.main.async {
                 self.songList = songs
                 self.tableView.reloadData()
             }
         })
     }
-    
 }
 
 extension SongListViewController {
