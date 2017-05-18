@@ -23,11 +23,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" textLabel="xJi-P3-ZZg" detailTextLabel="gn5-Yf-Y9b" style="IBUITableViewCellStyleSubtitle" id="DOr-dJ-bSQ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SongCell" textLabel="xJi-P3-ZZg" detailTextLabel="gn5-Yf-Y9b" style="IBUITableViewCellStyleSubtitle" id="DOr-dJ-bSQ">
                                 <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DOr-dJ-bSQ" id="WqA-3N-Q0H">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xJi-P3-ZZg">
@@ -46,6 +46,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="yMZ-jX-EoN" kind="show" id="4KW-h3-yG5"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -61,6 +64,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Po-hB-hiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1085.5999999999999" y="99.400299850074973"/>
+        </scene>
+        <!--Song Detail View Controller-->
+        <scene sceneID="Loq-OY-0Cg">
+            <objects>
+                <viewController storyboardIdentifier="SongDetailViewController" id="yMZ-jX-EoN" customClass="SongDetailViewController" customModule="Warbler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tkK-uz-5hm"/>
+                        <viewControllerLayoutGuide type="bottom" id="1XS-AO-MJv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rJw-eG-YP0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRH-Th-VYL">
+                                <rect key="frame" x="146" y="323" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iRH-Th-VYL" firstAttribute="centerY" secondItem="rJw-eG-YP0" secondAttribute="centerY" id="TzR-qu-G9u"/>
+                            <constraint firstItem="iRH-Th-VYL" firstAttribute="centerX" secondItem="rJw-eG-YP0" secondAttribute="centerX" id="akE-Tk-V8V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceLabel" destination="iRH-Th-VYL" id="5wR-OF-gLC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5O-Jb-SIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="99"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uxA-bS-i7p">
@@ -79,6 +115,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fF4-sn-Zum" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="146.40000000000001" y="99.400299850074973"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="X5W-4o-As2">
+            <objects>
+                <viewController id="n98-05-g4r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5vf-hS-Uam"/>
+                        <viewControllerLayoutGuide type="bottom" id="cXI-1W-j9A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pp7-ok-Um2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZRL-al-v7y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>

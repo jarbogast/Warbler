@@ -18,6 +18,17 @@ class SongListViewController: UITableViewController, WarblerViewController {
             searchBar.delegate = self
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let cell = sender as? UITableViewCell else { return }
+        guard let destination = segue.destination as? SongDetailViewController else { return }
+        
+        if let indexPath = tableView.indexPath(for: cell) {
+            let song = songList[indexPath.row]
+            destination.song = song
+            destination.iTunesDataSource = iTunesDataSource
+        }
+    }
 }
 
 extension SongListViewController: UISearchBarDelegate {
