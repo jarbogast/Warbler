@@ -9,23 +9,17 @@
 import UIKit
 
 class SongBySearchTermOperation: Operation {
-    var searchTerm: String
+    let searchTerm: String
+    let dataDownloader: DataDownloader
     var data: Data?
     
-    init(searchTerm: String) {
+    init(searchTerm: String, dataDownloader: DataDownloader) {
         self.searchTerm = searchTerm
+        self.dataDownloader = dataDownloader
         super.init()
     }
     
     override func main() {
-        let urlSession = URLSession(configuration: URLSessionConfiguration.default)
-        let semaphore = DispatchSemaphore(value: 0)
-        
-        _ = urlSession.dataTask(with: URL(searchURLWithTerm: searchTerm)!) { (data, response, error) in
-            self.data = data
-            semaphore.signal()
-        }.resume()
-        
-        _ = semaphore.wait(timeout: .distantFuture)
+        self.data = dataDownloader.dataWithUrl(URL(searchURLWithTerm: searchTerm)!)
     }
 }
