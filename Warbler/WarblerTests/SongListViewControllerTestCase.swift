@@ -34,9 +34,31 @@ class SongListViewControllerTestCase: XCTestCase {
         XCTAssertEqual(cell.detailTextLabel?.text, "3.53")
     }
     
+    func testSearchInvocation() {
+        let searchExpectation = expectation(description: "SearchBegan")
+        
+        class TestiTunesDataSource: ITunesDataSource {
+            let expectation: XCTestExpectation
+            
+            init(expectation: XCTestExpectation) {
+                self.expectation = expectation
+            }
+            
+            func fetchSongsMatchingSearchTerm(_ searchTerm: String, completionBlock: @escaping ([Song]) -> Void) {
+                XCTAssertEqual(searchTerm, "Jack Johnson")
+                expectation.fulfill()
+            }
+        }
+        
+        let viewController = createSongListViewController()
+        viewController.iTunesDataSource = TestiTunesDataSource(expectation: searchExpectation)
+        viewController.searchButtonPressed(nil)
+
+        waitForExpectations(timeout: 3.0, handler: nil)
+    }
+    
     func createSongListViewController() -> SongListViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "SongListViewController") as! SongListViewController
     }
-    
 }
