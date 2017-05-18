@@ -18,7 +18,7 @@ class ProductionITunesDataSource: ITunesDataSource {
     let dataDownloader = URLSessionDataDownloader()
     
     func fetchSongsMatchingSearchTerm(_ searchTerm: String, completionBlock: @escaping ([Song]) -> Void) {
-        let songOperation = SongBySearchTermOperation(searchTerm: "Jack Johnson", dataDownloader: dataDownloader)
+        let songOperation = SongBySearchTermOperation(searchTerm: searchTerm, dataDownloader: dataDownloader)
         let jsonOperation = JsonParsingOperation()
         let parseOperation = SongParsingOperation()
         
