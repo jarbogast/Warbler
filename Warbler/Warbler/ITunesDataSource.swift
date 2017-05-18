@@ -14,8 +14,13 @@ protocol ITunesDataSource {
 
 class ProductionITunesDataSource: ITunesDataSource {
     
-    let operationQueue = OperationQueue()
-    let dataDownloader = URLSessionDataDownloader()
+    let operationQueue: OperationQueue
+    let dataDownloader: DataDownloader
+    
+    init(operationQueue: OperationQueue = OperationQueue(), dataDownloader: DataDownloader = URLSessionDataDownloader()) {
+        self.operationQueue = operationQueue
+        self.dataDownloader = dataDownloader
+    }
     
     func fetchSongsMatchingSearchTerm(_ searchTerm: String, completionBlock: @escaping ([Song]) -> Void) {
         let songOperation = SongBySearchTermOperation(searchTerm: searchTerm, dataDownloader: dataDownloader)

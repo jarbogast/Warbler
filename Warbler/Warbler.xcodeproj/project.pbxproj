@@ -11,6 +11,7 @@
 		AB086DF11ECD1CAD005A508F /* SongListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB086DF01ECD1CAD005A508F /* SongListViewControllerTestCase.swift */; };
 		AB086DF71ECD21F0005A508F /* DataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB086DF61ECD21F0005A508F /* DataDownloader.swift */; };
 		AB086DF91ECD23E0005A508F /* SongBySearchTermOperationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB086DF81ECD23E0005A508F /* SongBySearchTermOperationTestCase.swift */; };
+		AB086DFB1ECDDD5F005A508F /* ProductionITunesDataSourceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB086DFA1ECDDD5F005A508F /* ProductionITunesDataSourceTestCase.swift */; };
 		AB5DB68A1EC13CD400DCB44E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6891EC13CD400DCB44E /* AppDelegate.swift */; };
 		AB5DB68C1EC13CD400DCB44E /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB68B1EC13CD400DCB44E /* SongListViewController.swift */; };
 		AB5DB68F1EC13CD400DCB44E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB68D1EC13CD400DCB44E /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		AB086DF01ECD1CAD005A508F /* SongListViewControllerTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongListViewControllerTestCase.swift; sourceTree = "<group>"; };
 		AB086DF61ECD21F0005A508F /* DataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDownloader.swift; sourceTree = "<group>"; };
 		AB086DF81ECD23E0005A508F /* SongBySearchTermOperationTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongBySearchTermOperationTestCase.swift; sourceTree = "<group>"; };
+		AB086DFA1ECDDD5F005A508F /* ProductionITunesDataSourceTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductionITunesDataSourceTestCase.swift; sourceTree = "<group>"; };
 		AB5DB6861EC13CD400DCB44E /* Warbler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Warbler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5DB6891EC13CD400DCB44E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB5DB68B1EC13CD400DCB44E /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				AB5DB6C41EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift */,
 				AB086DF01ECD1CAD005A508F /* SongListViewControllerTestCase.swift */,
 				AB086DF81ECD23E0005A508F /* SongBySearchTermOperationTestCase.swift */,
+				AB086DFA1ECDDD5F005A508F /* ProductionITunesDataSourceTestCase.swift */,
 			);
 			path = WarblerTests;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				AB086DF11ECD1CAD005A508F /* SongListViewControllerTestCase.swift in Sources */,
 				AB5DB6BB1EC13DC100DCB44E /* URLSearchTestCase.swift in Sources */,
 				AB5DB6BF1EC1538E00DCB44E /* SongParsingOperationTestCase.swift in Sources */,
+				AB086DFB1ECDDD5F005A508F /* ProductionITunesDataSourceTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
