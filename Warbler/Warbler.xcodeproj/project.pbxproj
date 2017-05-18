@@ -17,7 +17,6 @@
 		AB5DB68F1EC13CD400DCB44E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB68D1EC13CD400DCB44E /* Main.storyboard */; };
 		AB5DB6941EC13CD400DCB44E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB6931EC13CD400DCB44E /* Assets.xcassets */; };
 		AB5DB6971EC13CD400DCB44E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB5DB6951EC13CD400DCB44E /* LaunchScreen.storyboard */; };
-		AB5DB6AD1EC13CD400DCB44E /* WarblerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */; };
 		AB5DB6BB1EC13DC100DCB44E /* URLSearchTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */; };
 		AB5DB6BD1EC13E2900DCB44E /* URL+Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */; };
 		AB5DB6BF1EC1538E00DCB44E /* SongParsingOperationTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5DB6BE1EC1538E00DCB44E /* SongParsingOperationTestCase.swift */; };
@@ -30,13 +29,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		AB5DB69E1EC13CD400DCB44E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB5DB67E1EC13CD400DCB44E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB5DB6851EC13CD400DCB44E;
-			remoteInfo = Warbler;
-		};
-		AB5DB6A91EC13CD400DCB44E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AB5DB67E1EC13CD400DCB44E /* Project object */;
 			proxyType = 1;
@@ -60,9 +52,6 @@
 		AB5DB6981EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5DB69D1EC13CD400DCB44E /* WarblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB5DB6A31EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB5DB6A81EC13CD400DCB44E /* WarblerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WarblerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarblerUITests.swift; sourceTree = "<group>"; };
-		AB5DB6AE1EC13CD400DCB44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSearchTestCase.swift; sourceTree = "<group>"; };
 		AB5DB6BC1EC13E2900DCB44E /* URL+Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Search.swift"; sourceTree = "<group>"; };
 		AB5DB6BE1EC1538E00DCB44E /* SongParsingOperationTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongParsingOperationTestCase.swift; sourceTree = "<group>"; };
@@ -82,13 +71,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AB5DB69A1EC13CD400DCB44E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB5DB6A51EC13CD400DCB44E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,12 +110,31 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		AB086DFC1ECDFB1A005A508F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AB086DF01ECD1CAD005A508F /* SongListViewControllerTestCase.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AB086DFD1ECDFB2D005A508F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */,
+				AB5DB6BE1EC1538E00DCB44E /* SongParsingOperationTestCase.swift */,
+				AB5DB6C41EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift */,
+				AB086DF81ECD23E0005A508F /* SongBySearchTermOperationTestCase.swift */,
+				AB086DFA1ECDDD5F005A508F /* ProductionITunesDataSourceTestCase.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		AB5DB67D1EC13CD400DCB44E = {
 			isa = PBXGroup;
 			children = (
 				AB5DB6881EC13CD400DCB44E /* Warbler */,
 				AB5DB6A01EC13CD400DCB44E /* WarblerTests */,
-				AB5DB6AB1EC13CD400DCB44E /* WarblerUITests */,
 				AB5DB6871EC13CD400DCB44E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -143,7 +144,6 @@
 			children = (
 				AB5DB6861EC13CD400DCB44E /* Warbler.app */,
 				AB5DB69D1EC13CD400DCB44E /* WarblerTests.xctest */,
-				AB5DB6A81EC13CD400DCB44E /* WarblerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				AB086DF31ECD2100005A508F /* View */,
-				AB086DF21ECD20DD005A508F /* Model */,
 				AB086DED1ECD16C6005A508F /* View Controllers */,
+				AB086DF21ECD20DD005A508F /* Model */,
 				AB5DB6891EC13CD400DCB44E /* AppDelegate.swift */,
 				AB5DB6981EC13CD400DCB44E /* Info.plist */,
 			);
@@ -163,24 +163,11 @@
 		AB5DB6A01EC13CD400DCB44E /* WarblerTests */ = {
 			isa = PBXGroup;
 			children = (
+				AB086DFC1ECDFB1A005A508F /* View Controllers */,
+				AB086DFD1ECDFB2D005A508F /* Model */,
 				AB5DB6A31EC13CD400DCB44E /* Info.plist */,
-				AB5DB6BA1EC13DC100DCB44E /* URLSearchTestCase.swift */,
-				AB5DB6BE1EC1538E00DCB44E /* SongParsingOperationTestCase.swift */,
-				AB5DB6C41EC3EE2700DCB44E /* JsonParsingOperationTestCase.swift */,
-				AB086DF01ECD1CAD005A508F /* SongListViewControllerTestCase.swift */,
-				AB086DF81ECD23E0005A508F /* SongBySearchTermOperationTestCase.swift */,
-				AB086DFA1ECDDD5F005A508F /* ProductionITunesDataSourceTestCase.swift */,
 			);
 			path = WarblerTests;
-			sourceTree = "<group>";
-		};
-		AB5DB6AB1EC13CD400DCB44E /* WarblerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AB5DB6AC1EC13CD400DCB44E /* WarblerUITests.swift */,
-				AB5DB6AE1EC13CD400DCB44E /* Info.plist */,
-			);
-			path = WarblerUITests;
 			sourceTree = "<group>";
 		};
 		AB5DB6C81EC7933700DCB44E /* Operations */ = {
@@ -231,24 +218,6 @@
 			productReference = AB5DB69D1EC13CD400DCB44E /* WarblerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		AB5DB6A71EC13CD400DCB44E /* WarblerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB5DB6B71EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "WarblerUITests" */;
-			buildPhases = (
-				AB5DB6A41EC13CD400DCB44E /* Sources */,
-				AB5DB6A51EC13CD400DCB44E /* Frameworks */,
-				AB5DB6A61EC13CD400DCB44E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB5DB6AA1EC13CD400DCB44E /* PBXTargetDependency */,
-			);
-			name = WarblerUITests;
-			productName = WarblerUITests;
-			productReference = AB5DB6A81EC13CD400DCB44E /* WarblerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -271,12 +240,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = AB5DB6851EC13CD400DCB44E;
 					};
-					AB5DB6A71EC13CD400DCB44E = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4J237JQ3KN;
-						ProvisioningStyle = Automatic;
-						TestTargetID = AB5DB6851EC13CD400DCB44E;
-					};
 				};
 			};
 			buildConfigurationList = AB5DB6811EC13CD400DCB44E /* Build configuration list for PBXProject "Warbler" */;
@@ -294,7 +257,6 @@
 			targets = (
 				AB5DB6851EC13CD400DCB44E /* Warbler */,
 				AB5DB69C1EC13CD400DCB44E /* WarblerTests */,
-				AB5DB6A71EC13CD400DCB44E /* WarblerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -311,13 +273,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AB5DB69B1EC13CD400DCB44E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB5DB6A61EC13CD400DCB44E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,14 +311,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AB5DB6A41EC13CD400DCB44E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB5DB6AD1EC13CD400DCB44E /* WarblerUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -371,11 +318,6 @@
 			isa = PBXTargetDependency;
 			target = AB5DB6851EC13CD400DCB44E /* Warbler */;
 			targetProxy = AB5DB69E1EC13CD400DCB44E /* PBXContainerItemProxy */;
-		};
-		AB5DB6AA1EC13CD400DCB44E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB5DB6851EC13CD400DCB44E /* Warbler */;
-			targetProxy = AB5DB6A91EC13CD400DCB44E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -553,34 +495,6 @@
 			};
 			name = Release;
 		};
-		AB5DB6B81EC13CD400DCB44E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 4J237JQ3KN;
-				INFOPLIST_FILE = WarblerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.WarblerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Warbler;
-			};
-			name = Debug;
-		};
-		AB5DB6B91EC13CD400DCB44E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 4J237JQ3KN;
-				INFOPLIST_FILE = WarblerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anothercupofcocoa.WarblerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = Warbler;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -607,15 +521,6 @@
 			buildConfigurations = (
 				AB5DB6B51EC13CD400DCB44E /* Debug */,
 				AB5DB6B61EC13CD400DCB44E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB5DB6B71EC13CD400DCB44E /* Build configuration list for PBXNativeTarget "WarblerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB5DB6B81EC13CD400DCB44E /* Debug */,
-				AB5DB6B91EC13CD400DCB44E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
