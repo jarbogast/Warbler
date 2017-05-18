@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SongListViewController.swift
 //  Warbler
 //
 //  Created by Jonathan Arbogast on 5/8/17.
@@ -8,15 +8,13 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class SongListViewController: UITableViewController, WarblerViewController {
 
-    var iTunesDataSource = ProductionITunesDataSource()
+    var iTunesDataSource: ITunesDataSource?
     var songList = [Song]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        iTunesDataSource.fetchSongsMatchingSearchTerm("Jack Johnson", completionBlock: { (songs) in
+    @IBAction func searchButtonPressed(_ sender: UIBarButtonItem) {
+        iTunesDataSource?.fetchSongsMatchingSearchTerm("Jack Johnson", completionBlock: { (songs) in
             DispatchQueue.main.async {
                 self.songList = songs
                 self.tableView.reloadData()
@@ -24,6 +22,9 @@ class ViewController: UITableViewController {
         })
     }
     
+}
+
+extension SongListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

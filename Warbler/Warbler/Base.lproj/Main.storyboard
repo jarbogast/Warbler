@@ -12,7 +12,7 @@
         <!--Songs-->
         <scene sceneID="4cp-Rp-fkP">
             <objects>
-                <tableViewController id="s1p-1m-6nT" customClass="ViewController" customModule="Warbler" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SongListViewController" id="s1p-1m-6nT" customClass="SongListViewController" customModule="Warbler" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8P9-6G-KSl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,13 @@
                             <outlet property="delegate" destination="s1p-1m-6nT" id="743-f5-5rm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Songs" id="0mL-Qd-6uk"/>
+                    <navigationItem key="navigationItem" title="Songs" id="0mL-Qd-6uk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="3US-Yb-QtQ">
+                            <connections>
+                                <action selector="searchButtonPressed:" destination="s1p-1m-6nT" id="vxY-ME-Sbn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Po-hB-hiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
