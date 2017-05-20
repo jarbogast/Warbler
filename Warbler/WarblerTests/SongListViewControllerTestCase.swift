@@ -31,7 +31,7 @@ class SongListViewControllerTestCase: XCTestCase {
         
         let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))
         XCTAssertEqual(cell.textLabel?.text, "Test Song")
-        XCTAssertEqual(cell.detailTextLabel?.text, "3.53")
+        XCTAssertEqual(cell.detailTextLabel?.text, "$3.53")
     }
     
     func testSearchInvocation() {
