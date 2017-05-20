@@ -18,7 +18,7 @@ class SongListViewControllerTestCase: XCTestCase {
     
     func testNumberOfRowsInSection() {
         let viewController = createSongListViewController()
-        let song = Song(name: "Test Song", trackPrice: 3.53)
+        let song = Song(name: "Test Song", trackPrice: 3.53, trackPriceCurrency: "USD")
         viewController.songList = [song]
         
         XCTAssertEqual(viewController.tableView(viewController.tableView, numberOfRowsInSection: 0), 1)
@@ -26,7 +26,7 @@ class SongListViewControllerTestCase: XCTestCase {
     
     func testCellConfiguration() {
         let viewController = createSongListViewController()
-        let song = Song(name: "Test Song", trackPrice: 3.53)
+        let song = Song(name: "Test Song", trackPrice: 3.53, trackPriceCurrency: "USD")
         viewController.songList = [song]
         
         let cell = viewController.tableView(viewController.tableView, cellForRowAt: IndexPath(row: 0, section: 0))

@@ -22,7 +22,9 @@ class SongDetailViewController: UIViewController, WarblerViewController {
         super.viewDidLoad()
         
         if let song = song {
-            priceLabel.text = String(song.trackPrice)
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .currency
+            priceLabel.text = numberFormatter.string(from: NSNumber(value: song.trackPrice))
         }
     }
 

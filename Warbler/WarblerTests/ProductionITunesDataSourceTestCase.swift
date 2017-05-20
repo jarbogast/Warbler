@@ -14,7 +14,7 @@ class ProductionITunesDataSourceTestCase: XCTestCase {
     func testValidResponseData() {
         class TestDataDownloader: DataDownloader {
             func dataWithUrl(_ url: URL) -> Data? {
-                let json = ["results": [["kind": "song", "trackName": "Better Together", "trackPrice": 0.99]]]
+                let json = ["results": [["kind": "song", "trackName": "Better Together", "trackPrice": 0.99, "currency": "USD"]]]
                 let data = try! JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
                 return data
             }

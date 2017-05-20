@@ -12,28 +12,33 @@ import XCTest
 class SongParsingOperationTestCase: XCTestCase {
     
     func testValidDictionary() {
-        let dictionary = ["kind": "song", "trackName": "Better Together", "trackPrice": 0.99] as [String : Any]
-        let expectedSong = Song(name: "Better Together", trackPrice: 0.99)
+        let dictionary = ["kind": "song", "trackName": "Better Together", "trackPrice": 0.99, "currency": "USD"] as [String : Any]
+        let expectedSong = Song(name: "Better Together", trackPrice: 0.99, trackPriceCurrency: "USD")
         assert(dictionary: dictionary, resultsInSong: expectedSong)
     }
     
     func testWrongKind() {
-        let dictionary = ["kind": "movie", "trackName": "Better Together"]
+        let dictionary = ["kind": "movie", "trackName": "Better Together", "trackPrice": 0.99, "currency": "USD"] as [String : Any]
         assert(dictionary: dictionary, resultsInSong: nil)
     }
     
     func testMissingName() {
-        let dictionary = ["kind": "song", "trackPrice": 1.29] as [String : Any]
+        let dictionary = ["kind": "movie", "trackPrice": 0.99, "currency": "USD"] as [String : Any]
         assert(dictionary: dictionary, resultsInSong: nil)
     }
     
     func testMissingTrackPrice() {
-        let dictionary = ["kind": "song", "trackName": "Better Together"]
+        let dictionary = ["kind": "movie", "trackName": "Better Together", "trackPrice": 0.99] as [String : Any]
+        assert(dictionary: dictionary, resultsInSong: nil)
+    }
+    
+    func testMissingCurrency() {
+        let dictionary = ["kind": "movie", "trackName": "Better Together", "trackPrice": 0.99] as [String : Any]
         assert(dictionary: dictionary, resultsInSong: nil)
     }
     
     func testWrongTypeForKindKey() {
-        let dictionary = ["kind": 52]
+        let dictionary = ["kind": 52, "trackName": "Better Together", "trackPrice": 0.99, "currency": "USD"] as [String : Any]
         assert(dictionary: dictionary, resultsInSong: nil)
     }
     

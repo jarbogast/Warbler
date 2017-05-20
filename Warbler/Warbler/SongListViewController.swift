@@ -55,8 +55,12 @@ extension SongListViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell")!
-        cell.textLabel?.text = songList[indexPath.row].name
-        cell.detailTextLabel?.text = String(songList[indexPath.row].trackPrice)
+        let song = songList[indexPath.row]
+        cell.textLabel?.text = song.name
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        cell.detailTextLabel?.text = numberFormatter.string(from: NSNumber(value: song.trackPrice))
         return cell
     }
 }

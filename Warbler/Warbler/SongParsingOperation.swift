@@ -11,6 +11,7 @@ import UIKit
 struct Song {
     let name: String
     let trackPrice: Double
+    let trackPriceCurrency: String
 }
 
 class SongParsingOperation: Operation {
@@ -27,8 +28,9 @@ class SongParsingOperation: Operation {
         
             guard let name = dictionary["trackName"] as? String else { return }
             guard let trackPrice = dictionary["trackPrice"] as? Double else { return }
+            guard let currency = dictionary["currency"] as? String else { return }
             
-            songs.append(Song(name: name, trackPrice: trackPrice))
+            songs.append(Song(name: name, trackPrice: trackPrice, trackPriceCurrency: currency))
         }
     }
 }
